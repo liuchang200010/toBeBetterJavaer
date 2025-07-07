@@ -1062,7 +1062,7 @@ HashMap 不是线程安全的，主要有以下几个问题：
 
 不过，JDK 8 时通过尾插法修复了这个问题，扩容时会保持链表原来的顺序。
 
-②、多线程在进行 put 元素的时候，可能会导致元素丢失。因为计算出来的位置可能会被其他线程覆盖掉，比如说一个县城 put 3 的时候，另外一个线程 put 了 7，就把 3 给弄丢了。
+②、多线程在进行 put 元素的时候，可能会导致元素丢失。因为计算出来的位置可能会被其他线程覆盖掉，比如说一个线程 put 3 的时候，另外一个线程 put 了 7，就把 3 给弄丢了。
 
 ![二哥的 Java 进阶之路](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/collection/hashmap-thread-nosafe-10.png)
 
